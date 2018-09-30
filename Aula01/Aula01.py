@@ -20,17 +20,19 @@ def soma_digitos(x):
     print(sum)
 
 
-x = input('Escreve um valor inteiro')
-le_inteiro(x)
+# x = input('Escreve um valor inteiro')
+# le_inteiro(x)
 
 
-def apaga_ocorrencias(t, value):
-    lenTuplo = 0
-    newTuplo = ()
-    while len(t) < lenTuplo - 1:
-        if t[lenTuplo] == value:
-            newTuplo = newTuplo + t[lenTuplo]
-    print(newTuplo)
+def apaga_ocorrencias(tuplo, inteiro):
+    mylist = []
+    for x in range(len(tuplo)):
+        if tuplo[x] != inteiro:
+            mylist.append(tuplo[x])
+    mytuple = tuple(mylist)
+    print(mytuple)
 
-print("-------------------")
-apaga_ocorrencias((1, 2, 2, 3, 4, 9), 10)
+
+tuplo = ('r', 30, 30, 22, 234324, 244, 23432, 4, 324, 32, 4, 23)
+
+print(apaga_ocorrencias(tuplo, 30))
