@@ -90,3 +90,29 @@ print("---------------------------------")
 
 print(point3d_1.distanciaOrigem())
 print(point3d_2.distanciaOrigem())
+
+
+class Circulo:
+    def __init__(self, point, raio):
+        self.Point = point
+        self.raio = raio
+
+    def diametro(self):
+        return self.raio * 2
+
+    def perimetro(self):
+        return math.pi * self.diametro()
+
+    def area(self):
+        return math.pi * math.pow(self.raio, 2)
+
+    def __str__(self):
+        return "(" + str(self.Point) + ", " + str(self.raio) + ")"
+
+
+print("-----Circulo----------")
+p = Point(1, 10)
+cir = Circulo(p, 20)
+print(cir.diametro())
+print(cir.area())
+print(cir.perimetro())
