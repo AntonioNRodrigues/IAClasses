@@ -1,4 +1,4 @@
-from TP03.search import *
+from Aula03.search import *
 
 
 class ProblemaTeoricas_1(Problem):
@@ -71,3 +71,11 @@ print(result.path())
 print(result.solution())
 print(result.path_cost)
 print("-----------------------------------------------")
+
+r_ucs = uniform_cost_search(problema_2)
+print(r_ucs.state)
+print(r_ucs.parent)
+print(r_ucs.action)
+print(r_ucs.path_cost)
+print(r_ucs.depth)
+print(r_ucs.solution())

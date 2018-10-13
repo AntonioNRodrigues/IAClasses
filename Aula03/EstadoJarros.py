@@ -1,4 +1,4 @@
-from TP03.search import *
+from Aula03.search import *
 
 
 class EstadoJarros:
@@ -89,6 +89,9 @@ class ProblemaJarros(Problem):
         return estado.jarros[0][1] == self.vamos_medir or \
                estado.jarros[1][1] == self.vamos_medir
 
+    def path_cost(self, c, state1, action, state2):
+        return c + state1.jarros[0][1] - state2.jarros[0][1]
+
 
 prob_jarros = ProblemaJarros()
 print(prob_jarros.initial)
@@ -96,6 +99,7 @@ print(prob_jarros.vamos_medir)
 medida1 = depth_first_graph_search(prob_jarros)
 print(medida1.solution())
 print(medida1.path())
+print(medida1.path_cost())
 
 jarros2 = ((7, 0), (5, 0))
 estadoJarros = EstadoJarros(jarros2)
@@ -108,9 +112,11 @@ print(medida2.path())
 
 jarros3 = ((7, 0), (8, 0))
 estadoJarros3 = EstadoJarros(jarros3)
-prob_jarros3 = ProblemaJarros(estadoJarros3, 6)
+prob_jarros3 = ProblemaJarros(estadoJarros3, 4)
 print(prob_jarros3.initial)
 print(prob_jarros3.vamos_medir)
 medida3 = depth_first_graph_search(prob_jarros3)
+
 print(medida3.solution())
+print(medida3.depth)
 print(medida3.path())

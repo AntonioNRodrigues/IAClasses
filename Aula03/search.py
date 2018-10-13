@@ -10,7 +10,7 @@ import random
 import sys
 from collections import defaultdict
 
-from TP03.utils import (
+from Aula03.utils import (
     is_in, argmin, argmax, argmax_random_tie, probability, weighted_sampler,
     memoize, print_table, open_data, Stack, FIFOQueue, PriorityQueue, name,
     distance
